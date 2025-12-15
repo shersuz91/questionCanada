@@ -6076,6 +6076,7 @@ var full_practice={
         "Canada-Germany border"
     ]
 ]
-    ]
+    ],
+    "truefalse": []
 }
 export const questionData = {rights, who_we_are, history, modern_canada, governance, federal_elections, justice_system, canadian_symbols, canadas_economy, canadas_regions,full_practice}; 

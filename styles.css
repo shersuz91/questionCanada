@@ -1,0 +1,310 @@
+:root {
+    --color-1: #2c3e50; /* Dark Blue */
+    --color-2: #34495e; /* Darker Blue */
+    --color-3: #27ae60; /* Green */
+    --color-4: #f39c12; /* Soft Orange */
+    --color-5: #ecf0f1; /* Light Gray */
+    font-family: 'Arial', sans-serif; /* Good for reading */
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 25px;
+    word-spacing: 2px;
+}
+body {
+    background-color: var(--color-5);
+    color: var(--color-1);
+    font-size: 16px;
+    margin: 0;
+    padding-top: 0 !important;
+    top: 0 !important;
+}
+h3#qtit {
+    position: fixed;
+    z-index: 1;
+    background: var(--color-5);
+    padding: 10px 5px;
+    width: 100%;
+    height: 60px;
+}
+.navbar {
+    width: 100%;
+    height: 63px;
+    background-color: var(--color-2);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+ul {
+    overflow: scroll;
+    height: 600px;
+}
+h5 {
+    color: var(--color-5);
+    font-size: 13px;
+    text-align: center;
+    margin: 16px 0 16px 26px;
+    width: 50%;
+    padding: 0;
+}
+#navbar-logo {
+    font-size: 24px;
+    color: var(--color-5);
+    font-weight: bold;
+    margin: 5px 10px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1001;
+}
+.ulBox {
+    min-width: 211px;
+    max-width: max-content;
+    border: 2px solid var(--color-4);
+    border-left: none;
+    position: fixed;
+    border-top: none;
+    border-radius: 0 0 5px 0;
+    left: -370px;
+    top: 60px;
+    z-index: 1001;
+    background-color: var(--color-2);
+    transition: left 0.3s ease-in-out;
+}
+.ulBox.active {
+    left: 0;
+    transition: left 0.3s ease-in-out;
+}
+.boxBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.btns {
+    display: inline-block;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 2px solid var(--color-4);
+    width: max-content;
+}
+.btns button{
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--color-1);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px black;
+}
+.activ_session{
+    background-color: var(--color-3) !important;
+}
+.ulBox ul li {
+    font-size: 18px;
+    padding: 10px;
+    margin: 5px;
+    background: var(--color-1);
+    color: white;
+}
+.ulBox ul li:hover {
+    background: var(--color-3);
+    cursor: pointer;
+}   
+
+
+/* Sections */
+.content{
+    padding-top: 60px;
+}
+#close {
+    font-size: 27px;
+    transform: rotate(180deg);
+    position: fixed;
+    top: 15px;
+    right: 5px;
+    border: none;
+    z-index: 1000;
+    background: var(--color-2);
+}
+
+section {
+    padding: 10px 0;
+    background-color: var(--color-5);
+    margin: 0px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px ;
+}
+section h3 {
+    text-align: left;
+    color: var(--color-1);
+    margin-bottom: 0px;
+    padding: 0 5px;
+    font-size: 16px;
+    width: 70%;
+}  
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+
+.boxType {
+   display: grid;
+}
+.type{
+    background-color: var(--color-2);
+    margin: 10px 0;
+   
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px black;
+    font-size: 18px;
+    color: white;
+}
+.type p{
+    padding: 20px 0;
+}
+.btn_test{
+    margin: 20px 3px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: var(--color-3);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px black;
+}
+div#question-container {
+   font-size: 16px;
+   padding-top: 63px;
+}
+.question {
+    position: relative;
+    margin-bottom: 20px;
+    color: black;
+    padding:30px 15PX;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.question p {
+    margin: 0 0 10px;
+    font-weight: bold;
+    color: var(--color-2);
+    text-align: left;
+    width: 92%;
+}
+.question label {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    text-align: left;
+}
+.question input[type="radio"] {
+    margin-right: 10px;
+}
+input[type="radio" i] {
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 0px 5px;
+    padding: initial;
+    border: initial;
+}
+label:has(input.correct) {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    
+}
+label:has(input.correct.hideCorrect) {
+    background-color: white !important;
+    border-color: #ddd !important;
+    
+}
+label:has(input:checked.wrongAnswer:not(.correct)) {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.translatList {
+    top: 0;
+    right: 0;
+    z-index: 1002;
+}
+#google_translate_element {
+    display: none;
+}
+.seconnT{
+    display: none;
+}
+#goog-gt-tt {
+    display: none !important;
+}
+.VIpgJd-yAWNEb-VIpgJd-fmcmS-sn54Q {
+    background-color: var(--color-2) !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+    border: 2px solid var(--color-4) !important;
+    border-radius: 5px !important;
+}
+
+select.goog-te-combo {
+    height: 35px;
+    font-size: 16px;
+    background-color: var(--color-1) !important;
+    color: var(--color-5) !important;
+    border: none !important;
+    border-radius: 4px !important;
+    padding: 5px 10px !important;
+    cursor: pointer;
+}
+.goog-te-gadget {
+    color: transparent !important;
+}
+.skiptranslate.goog-te-gadget > span {
+    display: none;
+}
+iframe#\:1\.container {
+    display: none;
+}
+button.translate_this {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    border: none;
+    background-color: var(--color-1);
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    line-height: 50%;
+}
+
+button.translate_this:hover {
+    background-color: var(--color-2);
+}
+
+span.material-icons {
+    border-radius: 50%;
+    font-size: 19px !important;
+    color: var(--color-5) !important;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canadian Citizenship Practice Tests</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        { pageLanguage: "", includedLanguages: "ar,en" },
+        "google_translate_element"
+      );
+    }
+  </script>
+  <script
+    type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+  ></script>
+
+  <body translate="no">
+    <div id="google_translate_element" class="translatList"></div>
+
+    
+    <div>
+      <nav class="navbar">
+        <div id="navbar-logo" toggleBtn>
+          <i class="fas fa-bars navbar-icon" toggleBtn></i>
+          <i class="fas hide fa-times navbar-icon" toggleBtn></i>
+        </div>
+        <h5 id="tite" translate="no">Canadian Citizenship Practice Tests</h5>
+      </nav>
+      <div class="ulBox" list>
+        <div class="boxBtn">
+<div class="btns" list>
+          
+          <button id="study" class="mode-btn activ_session" closeit>
+            study
+          </button>
+          <button id="tests" class="mode-btn" closeit>tests</button>
+        </div>
+        <div class="translatList seconnT">
+            <div class="skiptranslate goog-te-gadget" dir="rtl" style="">
+              <div>
+                <select class="goog-te-combo" onchange="takeValue(this.value)" >
+                  <option value="ar" >العربية</option>
+                  <option value="en" selected>الإنجليزية</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <ul list>
+          <li id="rights" closeit class="_14 link_section rights activeSection">
+            Rights and Responsibilities of Citizenship
+          </li>
+          <li id="who_we_are" closeit class="_44 link_section who_we_are">Who We Are</li>
+          <li id="history" closeit class="_63 link_section history">Canada's History</li>
+          <li id="modern_canada" closeit class="_55 link_section modern_canada">Modern Canada</li>
+          <li id="governance" closeit class="_11 link_section governance">
+            How Canadians Govern Themselves
+          </li>
+          <li id="federal_elections" closeit class="_11 link_section federal_elections">
+            Federal Elections
+          </li>
+          <li id="justice_system" closeit class="_11 link_section justice_system">
+            The Justice System
+          </li>
+          <li id="canadian_symbols" closeit class="_33 link_section canadian_symbols">
+            Canadian Symbols
+          </li>
+          <li id="canadas_economy" closeit class="_11 link_section canadas_economy">
+            Canada's Economy
+          </li>
+          <li id="canadas_regions" closeit class="_46 link_section canadas_regions">
+            Canada's Regions
+          </li>
+          <li id="full_practice" closeit class="_46 link_section full_practice">
+            Full Practice Test
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section for each list item  -->
+      <!-- rights -->
+      <div class="content">
+        <button class="hide" id="close">↪️</button>
+        <section id="section" class="section">
+          <h3 id="secTite"></h3>
+          <div class="boxType">
+            <div id="multiBox" class="type _1test">
+              <p class="multi_cho">Multiple Choice Test</p>
+              <!-- <button class="btn_test opentest">Test1</button> -->
+            </div>
+            <div id="trueBox" class="type _4tests">
+              <p>True / False Tests</p>
+              <!-- <button class="btn_test opentest">Test1</button> -->
+            </div>
+          </div>
+        </section>
+        <div id="questionPart" class="hide">
+          <h3 id="qtit"> </h3>
+          <div  id="question-container">
+                <div class="question" translate="no">
+                  <button class="translate_this" onclick="translate_this(this)"translate="no">
+                    <span class="material-icons" style="font-size: 32px; color: #2196f3">translate</span>
+                  </button>
+                  <p class="theQ">
+                    1. Which historical document is known as the Great Charter
+                    of Freedoms?
+                  </p>
+                  <label class="theA"
+                    ><input type="radio" name="question1" value="A" /> A. The
+                    Canadian Charter of Rights and Freedoms</label
+                  >
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+    <script src="./jq.js"></script>
+    <script src="question.js" type="module"></script>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>

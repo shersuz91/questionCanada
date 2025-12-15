@@ -46,9 +46,10 @@ link_sections[0].onclick()
 
 for (let i = 0; i < link_sections.length; i++) {
   link_sections[i].onclick = function () {
-    link_sections[i].classList.add("activeSection");
+    close.click();
+    // link_sections[i].classList.add("activeSection");
     qtit.innerText=link_sections[i].innerText;
-    $(link_sections[i]).siblings().removeClass("activeSection");
+    // $(link_sections[i]).siblings().removeClass("activeSection");
     sectionTitle.innerText = link_sections[i].innerText;
      id_section=link_sections[i].id;
     // console.log(questionss["rights"]);
@@ -58,6 +59,7 @@ for (let i = 0; i < link_sections.length; i++) {
      Array.from($(trueBox).children(".opentest")).forEach((btn) => {
       trueBox.removeChild(btn);
     })
+    
     function createButtons(box, index, type) {
       var btn= document.createElement("button");
       btn.innerText="Test " + (index + 1);
@@ -76,6 +78,10 @@ createButtons(multiBox, d, "multi")
     }
      for ( var d=0; d< questionss[id_section].truefalse.length; d++){
 createButtons(trueBox, d, "truefalse") 
+console.log("df");
+    }
+    if(questionss[id_section].truefalse.length===0){
+      trueBox.style.display="none";
     }
     // Array.from(questionss[id_section].multi).forEach((type, index) => {
       
@@ -121,7 +127,7 @@ function openTest(e){
     answersLabel.classList.add("options");
     var answerInput=document.createElement("input");
     answerInput.setAttribute("type","radio");
-    answerInput.setAttribute("name","q1");
+    answerInput.setAttribute("name",`g${firstQ}`);
     answerInput.classList.add("radio_input");
     if (g===0){
     answerInput.classList.add("hideCorrect");
@@ -178,7 +184,8 @@ function check_mode() {
     if (btn.classList.contains("activ_session")) {
       if (btn.id === "tests") {
         Array.from(radio_inputs).forEach((input) => {
-           
+         input.removeAttribute("disabled");
+input.disable=false;
           input.style.display = "inline-block";
         });
       } else if (btn.id === "study") {
@@ -186,13 +193,14 @@ function check_mode() {
         Array.from(radio_inputs).forEach((input) => {
           
           input.style.display = "none";
+          input.setAttribute("disabled", "true");
           input.classList.remove("hideCorrect");
         });
       }
     }
   });
 }
-
+check_mode();
 
 
 Array.from(mode_btns).forEach((button) => {
@@ -205,12 +213,16 @@ Array.from(mode_btns).forEach((button) => {
     button.classList.add("activ_session");
     if (button.id === "study") {
       Array.from(radio_inputs).forEach((btn) => {
+         btn.classList.remove("wrongAnswer");
+        btn.setAttribute("disabled", "true");
         console.log("check mode2");
         btn.style.display = "none";
         btn.classList.remove("hideCorrect");
       });
     } else if (button.id === "tests") {
       Array.from(radio_inputs).forEach((btn) => {
+        btn.disable=false;
+        btn.removeAttribute("disabled");
         btn.style.display = "inline-block";
         if (btn.classList.contains("correct")) {
           btn.classList.add("hideCorrect");
@@ -279,27 +291,3 @@ Array.from(radio_inputs).forEach((input) => {
 
 
 
-
-
-function ensureCorrectAnswersAtIndex1(questions, correctAnswers) {
-  for (let i = 0; i < questions.length; i++) {
-    const correctAnswer = correctAnswers[i];
-    
-    // تحقق إذا لم يكن الجواب الصحيح في index 1
-    if (questions[i][1] !== correctAnswer) {
-      const correctIndex = questions[i].indexOf(correctAnswer);
-      if (correctIndex !== -1) {
-        // تبديل الإجابة الصحيحة مع العنصر في index 1
-        [questions[i][1], questions[i][correctIndex]] = [questions[i][correctIndex], questions[i][1]];
-      } else {
-        console.warn(`Correct answer not found in question ${i + 1}`);
-      }
-    }
-  }
-  return questions;
-}
-
-
-
-const fixedQuestions = ensureCorrectAnswersAtIndex1(questionData, correctAnswers);
-console.log(fixedQuestions);

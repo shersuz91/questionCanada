@@ -105,7 +105,7 @@ function openTest(e){
   function createQuestion(firstQ){
     var questionDiv=document.createElement("div");
     questionDiv.classList.add("question");
-    questionDiv.setAttribute("translate","no");
+    // questionDiv.setAttribute("translate","no");
 
     var transBtn=document.createElement("button");
     transBtn.classList.add("translate_this");

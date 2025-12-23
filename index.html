@@ -31,7 +31,7 @@
   <body translate="no">
     <div id="google_translate_element" class="translatList"></div>
 
-    
+    <div id="userLogin"></div>
     <div>
       <nav class="navbar">
         <div id="navbar-logo" toggleBtn>
@@ -42,48 +42,73 @@
       </nav>
       <div class="ulBox" list>
         <div class="boxBtn">
-<div class="btns" list>
-          
-          <button id="study" class="mode-btn activ_session" closeit>
-            study
-          </button>
-          <button id="tests" class="mode-btn" closeit>tests</button>
-        </div>
-        <div class="translatList seconnT">
+          <div class="btns" list>
+            <button id="study" class="mode-btn activ_session" closeit>
+              study
+            </button>
+            <button id="tests" class="mode-btn" closeit>tests</button>
+          </div>
+          <div class="translatList seconnT">
             <div class="skiptranslate goog-te-gadget" dir="rtl" style="">
               <div>
-                <select class="goog-te-combo" onchange="takeValue(this.value)" >
-                  <option value="ar" >العربية</option>
+                <select class="goog-te-combo" onchange="takeValue(this.value)">
+                  <option value="ar">العربية</option>
                   <option value="en" selected>الإنجليزية</option>
                 </select>
               </div>
             </div>
           </div>
         </div>
-        
+
         <ul list>
           <li id="rights" closeit class="_14 link_section rights activeSection">
             Rights and Responsibilities of Citizenship
           </li>
-          <li id="who_we_are" closeit class="_44 link_section who_we_are">Who We Are</li>
-          <li id="history" closeit class="_63 link_section history">Canada's History</li>
-          <li id="modern_canada" closeit class="_55 link_section modern_canada">Modern Canada</li>
+          <li id="who_we_are" closeit class="_44 link_section who_we_are">
+            Who We Are
+          </li>
+          <li id="history" closeit class="_63 link_section history">
+            Canada's History
+          </li>
+          <li id="modern_canada" closeit class="_55 link_section modern_canada">
+            Modern Canada
+          </li>
           <li id="governance" closeit class="_11 link_section governance">
             How Canadians Govern Themselves
           </li>
-          <li id="federal_elections" closeit class="_11 link_section federal_elections">
+          <li
+            id="federal_elections"
+            closeit
+            class="_11 link_section federal_elections"
+          >
             Federal Elections
           </li>
-          <li id="justice_system" closeit class="_11 link_section justice_system">
+          <li
+            id="justice_system"
+            closeit
+            class="_11 link_section justice_system"
+          >
             The Justice System
           </li>
-          <li id="canadian_symbols" closeit class="_33 link_section canadian_symbols">
+          <li
+            id="canadian_symbols"
+            closeit
+            class="_33 link_section canadian_symbols"
+          >
             Canadian Symbols
           </li>
-          <li id="canadas_economy" closeit class="_11 link_section canadas_economy">
+          <li
+            id="canadas_economy"
+            closeit
+            class="_11 link_section canadas_economy"
+          >
             Canada's Economy
           </li>
-          <li id="canadas_regions" closeit class="_46 link_section canadas_regions">
+          <li
+            id="canadas_regions"
+            closeit
+            class="_46 link_section canadas_regions"
+          >
             Canada's Regions
           </li>
           <li id="full_practice" closeit class="_46 link_section full_practice">
@@ -110,22 +135,30 @@
           </div>
         </section>
         <div id="questionPart" class="hide">
-          <h3 id="qtit"> </h3>
-          <div  id="question-container">
-                <div class="question" translate="no">
-                  <button class="translate_this" onclick="translate_this(this)"translate="no">
-                    <span class="material-icons" style="font-size: 32px; color: #2196f3">translate</span>
-                  </button>
-                  <p class="theQ">
-                    1. Which historical document is known as the Great Charter
-                    of Freedoms?
-                  </p>
-                  <label class="theA"
-                    ><input type="radio" name="question1" value="A" /> A. The
-                    Canadian Charter of Rights and Freedoms</label
-                  >
-                </div>
-              </div>
+          <h3 id="qtit"></h3>
+          <div id="question-container">
+            <div class="question" translate="no">
+              <button
+                class="translate_this"
+                onclick="translate_this(this)"
+                translate="no"
+              >
+                <span
+                  class="material-icons"
+                  style="font-size: 32px; color: #2196f3"
+                  >translate</span
+                >
+              </button>
+              <p class="theQ">
+                1. Which historical document is known as the Great Charter of
+                Freedoms?
+              </p>
+              <label class="theA"
+                ><input type="radio" name="question1" value="A" /> A. The
+                Canadian Charter of Rights and Freedoms</label
+              >
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -62,6 +62,7 @@ function check_username() {
         console.log(data);
         var currentUser = data.users;
     console.log(userData);
+    var nofound=false;
     for (var i = 0; i < currentUser.length; i++) {
       if (currentUser[i].username === name_user) {
         console.log("User found:", currentUser[i]);
@@ -82,7 +83,11 @@ function check_username() {
       }
     if (i === currentUser.length - 1) {
       console.log("User not found");
-    fetch(endpoint, {
+    nofound=true;
+    }
+    }
+    if(nofound){
+fetch(endpoint, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -99,7 +104,6 @@ function check_username() {
           .then((data) => {
             console.log(data);
           });
-    }
     }
       });
     
@@ -417,3 +421,4 @@ function check_username() {
 }
 
 check_username();
+

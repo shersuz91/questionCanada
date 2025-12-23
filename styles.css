@@ -22,6 +22,54 @@ body {
     padding-top: 0 !important;
     top: 0 !important;
 }
+div#userLogin {
+    width: 100vw;
+    height: 100vh;
+    background: #000000c9;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+div#userLogin > div {
+    background: var(--color-2);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px black;
+    text-align: center;
+    color: var(--color-5);
+}
+div#userLogin div p {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+div#userLogin div input {
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: 200px;
+}   
+div#userLogin div #alertName {
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: none;
+    text-align: left;
+}
+div#userLogin div button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: var(--color-3);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px black;
+}
 h3#qtit {
     position: fixed;
     z-index: 1;
@@ -49,8 +97,8 @@ ul {
 h5 {
     color: var(--color-5);
     font-size: 13px;
-    text-align: left;
-    margin: 10px 0 10px 50px;
+    text-align: center;
+    margin: 16px 0 16px 26px;
     width: 50%;
     padding: 0;
 }

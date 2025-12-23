@@ -88,6 +88,7 @@ function check_username() {
     }
     }
     if(!found){
+      console.log("user not found")
 fetch(endpoint, {
           method: "POST",
           headers: {
@@ -423,5 +424,6 @@ fetch(endpoint, {
 }
 
 check_username();
+
 
 

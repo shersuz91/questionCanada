@@ -322,7 +322,7 @@ Array.from(mode_btns).forEach((button) => {
       Array.from(radio_inputs).forEach((btn) => {
          btn.classList.remove("wrongAnswer");
         btn.setAttribute("disabled", "true");
-        console.log("check mode2");
+        btn.checked=false;
         btn.style.display = "none";
         btn.classList.remove("hideCorrect");
       });
@@ -399,6 +399,7 @@ Array.from(radio_inputs).forEach((input) => {
 }
 
 check_username();
+
 
 
 

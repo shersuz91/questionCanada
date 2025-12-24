@@ -153,6 +153,7 @@ link_sections[0].onclick()
 
 for (let i = 0; i < link_sections.length; i++) {
   link_sections[i].onclick = function () {
+    trueBox.style.display="block";
     close.click();
     // link_sections[i].classList.add("activeSection");
     qtit.innerText=link_sections[i].innerText;
@@ -398,6 +399,7 @@ Array.from(radio_inputs).forEach((input) => {
 }
 
 check_username();
+
 
 
 
